@@ -17,11 +17,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *carImageOne;
 
 @property (weak, nonatomic) IBOutlet UIImageView *carImageTwo;
-@property (weak, nonatomic) IBOutlet UIButton *ratingViewCaller;
+
 
 @property NSDate *trackingDate;
 
-- (IBAction)ratingViewButton:(id)sender;
+
 
 @end
 

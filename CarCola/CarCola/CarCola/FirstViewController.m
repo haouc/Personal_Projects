@@ -16,8 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.ratingViewCaller.hidden = YES;
-//for first use this app and record that.
+
     NSUserDefaults *startApp = [NSUserDefaults standardUserDefaults];
     [startApp setInteger:0 forKey:@"firstUse"];
     [startApp synchronize];
@@ -97,9 +96,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thank you for your interest" message:@"Please give me a feedback how likely you would recommend this App to your friends. Press the emerging Star Ball." delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
         [alert addButtonWithTitle:@"Rate"];
         [alert show];
-        
-        self.ratingViewCaller.hidden = NO;
-        [self.view bringSubviewToFront:self.ratingViewCaller];
+
     }
     
 }
@@ -158,6 +155,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)ratingViewButton:(id)sender {
-}
 @end

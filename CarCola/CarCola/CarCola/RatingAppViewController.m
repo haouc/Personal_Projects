@@ -66,8 +66,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == [alertView cancelButtonIndex]) {
         [self dismissViewControllerAnimated:YES completion:nil];
-        FirstViewController *controller;// = [[FirstViewController alloc] init];
-        controller.ratingViewCaller.hidden = YES;
+
         
     }
 }
