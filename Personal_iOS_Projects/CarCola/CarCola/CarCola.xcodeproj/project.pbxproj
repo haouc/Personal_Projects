@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA229FD31AB481AC00316B47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA229FD21AB481AC00316B47 /* Foundation.framework */; };
+		DA279BD51AA8D9E900810518 /* SaveNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA279BD41AA8D9E900810518 /* SaveNoteView.m */; };
+		DA436A811AB54C2F009A654C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA436A801AB54C2F009A654C /* AVFoundation.framework */; };
+		DA436A831AB54C38009A654C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA436A821AB54C38009A654C /* AudioToolbox.framework */; };
+		DA436A881AB54FEB009A654C /* Magic.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA436A871AB54FEB009A654C /* Magic.wav */; };
+		DA436A8A1AB55181009A654C /* Failure.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA436A891AB55181009A654C /* Failure.wav */; };
+		DA436A8C1AB5560C009A654C /* Door.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA436A8B1AB5560C009A654C /* Door.wav */; };
+		DA436A8E1AB55794009A654C /* Cleaning.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA436A8D1AB55794009A654C /* Cleaning.wav */; };
+		DA436A901AB557DC009A654C /* CleanShort.wav in Resources */ = {isa = PBXBuildFile; fileRef = DA436A8F1AB557DC009A654C /* CleanShort.wav */; };
+		DA436A931AB5E0DE009A654C /* RatingAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA436A921AB5E0DE009A654C /* RatingAppViewController.m */; };
+		DA436A961AB60CB6009A654C /* InitialLaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = DA436A951AB60CB6009A654C /* InitialLaunch.m */; };
+		DA6ADEC71AB28F72009AC013 /* UserRateMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6ADEC61AB28F72009AC013 /* UserRateMeViewController.m */; };
+		DA7FCE0D1AB3DD0200068A2A /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7FCE0C1AB3DD0200068A2A /* ReviewViewController.m */; };
+		DA8F22BA1AAF810A0069A673 /* GalleryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8F22B91AAF810A0069A673 /* GalleryTableViewController.m */; };
+		DA8F22BC1AB08A380069A673 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA8F22BB1AB08A380069A673 /* Settings.bundle */; };
+		DA8F22BF1AB08A7C0069A673 /* SharedNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8F22BE1AB08A7C0069A673 /* SharedNetworking.m */; };
+		DAACD7441AA6BC450070AE78 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACD7431AA6BC450070AE78 /* ThirdViewController.m */; };
+		DAACD7471AA6CB990070AE78 /* ActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACD7461AA6CB990070AE78 /* ActivityIndicatorView.m */; };
+		DACF5A7B1AA38A88003B49F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A7A1AA38A88003B49F3 /* main.m */; };
+		DACF5A7E1AA38A88003B49F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A7D1AA38A88003B49F3 /* AppDelegate.m */; };
+		DACF5A811AA38A88003B49F3 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A801AA38A88003B49F3 /* FirstViewController.m */; };
+		DACF5A841AA38A88003B49F3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A831AA38A88003B49F3 /* SecondViewController.m */; };
+		DACF5A871AA38A88003B49F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACF5A851AA38A88003B49F3 /* Main.storyboard */; };
+		DACF5A891AA38A88003B49F3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACF5A881AA38A88003B49F3 /* Images.xcassets */; };
+		DACF5A8C1AA38A88003B49F3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACF5A8A1AA38A88003B49F3 /* LaunchScreen.xib */; };
+		DACF5A981AA38A89003B49F3 /* CarColaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DACF5A971AA38A89003B49F3 /* CarColaTests.m */; };
+		DAD264B61AA95F72005853B4 /* MyCar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD264B51AA95F72005853B4 /* MyCar.m */; };
+		DAD264B91AA96FA4005853B4 /* MyCarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD264B81AA96FA4005853B4 /* MyCarTableViewController.m */; };
+		DAD264BC1AA97141005853B4 /* MyCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD264BB1AA97141005853B4 /* MyCarTableViewCell.m */; };
+		DAE5C4131AB3593E00D8665A /* CarScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE5C4121AB3593E00D8665A /* CarScrollViewController.m */; };
+		DAE5C4171AB35A9400D8665A /* CardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE5C4161AB35A9400D8665A /* CardViewLayout.m */; };
+		DAE5C41A1AB35AB600D8665A /* CardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE5C4191AB35AB600D8665A /* CardCollectionViewCell.m */; };
+		DAF404471AB12B77001AD0AE /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF404461AB12B77001AD0AE /* InfoViewController.m */; };
+		DAF4044A1AB16F15001AD0AE /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF404491AB16F15001AD0AE /* RateViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DACF5A921AA38A89003B49F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DACF5A6D1AA38A88003B49F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DACF5A741AA38A88003B49F3;
+			remoteInfo = CarCola;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA229FD21AB481AC00316B47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA279BD31AA8D9E900810518 /* SaveNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveNoteView.h; sourceTree = "<group>"; };
+		DA279BD41AA8D9E900810518 /* SaveNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveNoteView.m; sourceTree = "<group>"; };
+		DA436A801AB54C2F009A654C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DA436A821AB54C38009A654C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DA436A871AB54FEB009A654C /* Magic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Magic.wav; sourceTree = "<group>"; };
+		DA436A891AB55181009A654C /* Failure.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Failure.wav; sourceTree = "<group>"; };
+		DA436A8B1AB5560C009A654C /* Door.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Door.wav; sourceTree = "<group>"; };
+		DA436A8D1AB55794009A654C /* Cleaning.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Cleaning.wav; sourceTree = "<group>"; };
+		DA436A8F1AB557DC009A654C /* CleanShort.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CleanShort.wav; sourceTree = "<group>"; };
+		DA436A911AB5E0DE009A654C /* RatingAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingAppViewController.h; sourceTree = "<group>"; };
+		DA436A921AB5E0DE009A654C /* RatingAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingAppViewController.m; sourceTree = "<group>"; };
+		DA436A941AB60CB6009A654C /* InitialLaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialLaunch.h; sourceTree = "<group>"; };
+		DA436A951AB60CB6009A654C /* InitialLaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialLaunch.m; sourceTree = "<group>"; };
+		DA6ADEC51AB28F72009AC013 /* UserRateMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRateMeViewController.h; sourceTree = "<group>"; };
+		DA6ADEC61AB28F72009AC013 /* UserRateMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRateMeViewController.m; sourceTree = "<group>"; };
+		DA7FCE0B1AB3DD0200068A2A /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		DA7FCE0C1AB3DD0200068A2A /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
+		DA8F22B81AAF810A0069A673 /* GalleryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryTableViewController.h; sourceTree = "<group>"; };
+		DA8F22B91AAF810A0069A673 /* GalleryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryTableViewController.m; sourceTree = "<group>"; };
+		DA8F22BB1AB08A380069A673 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		DA8F22BD1AB08A7C0069A673 /* SharedNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedNetworking.h; sourceTree = "<group>"; };
+		DA8F22BE1AB08A7C0069A673 /* SharedNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedNetworking.m; sourceTree = "<group>"; };
+		DAACD7421AA6BC450070AE78 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		DAACD7431AA6BC450070AE78 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		DAACD7451AA6CB990070AE78 /* ActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorView.h; sourceTree = "<group>"; };
+		DAACD7461AA6CB990070AE78 /* ActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorView.m; sourceTree = "<group>"; };
+		DACF5A751AA38A88003B49F3 /* CarCola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarCola.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACF5A791AA38A88003B49F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACF5A7A1AA38A88003B49F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DACF5A7C1AA38A88003B49F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DACF5A7D1AA38A88003B49F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DACF5A7F1AA38A88003B49F3 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		DACF5A801AA38A88003B49F3 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		DACF5A821AA38A88003B49F3 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		DACF5A831AA38A88003B49F3 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		DACF5A861AA38A88003B49F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DACF5A881AA38A88003B49F3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DACF5A8B1AA38A88003B49F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DACF5A911AA38A89003B49F3 /* CarColaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarColaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DACF5A961AA38A89003B49F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACF5A971AA38A89003B49F3 /* CarColaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarColaTests.m; sourceTree = "<group>"; };
+		DAD264B41AA95F72005853B4 /* MyCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCar.h; sourceTree = "<group>"; };
+		DAD264B51AA95F72005853B4 /* MyCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCar.m; sourceTree = "<group>"; };
+		DAD264B71AA96FA4005853B4 /* MyCarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarTableViewController.h; sourceTree = "<group>"; };
+		DAD264B81AA96FA4005853B4 /* MyCarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarTableViewController.m; sourceTree = "<group>"; };
+		DAD264BA1AA97141005853B4 /* MyCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCarTableViewCell.h; sourceTree = "<group>"; };
+		DAD264BB1AA97141005853B4 /* MyCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCarTableViewCell.m; sourceTree = "<group>"; };
+		DAE5C4111AB3593E00D8665A /* CarScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarScrollViewController.h; sourceTree = "<group>"; };
+		DAE5C4121AB3593E00D8665A /* CarScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarScrollViewController.m; sourceTree = "<group>"; };
+		DAE5C4151AB35A9400D8665A /* CardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewLayout.h; sourceTree = "<group>"; };
+		DAE5C4161AB35A9400D8665A /* CardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewLayout.m; sourceTree = "<group>"; };
+		DAE5C4181AB35AB600D8665A /* CardCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionViewCell.h; sourceTree = "<group>"; };
+		DAE5C4191AB35AB600D8665A /* CardCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionViewCell.m; sourceTree = "<group>"; };
+		DAF404451AB12B77001AD0AE /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		DAF404461AB12B77001AD0AE /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		DAF404481AB16F15001AD0AE /* RateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateViewController.h; sourceTree = "<group>"; };
+		DAF404491AB16F15001AD0AE /* RateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DACF5A721AA38A88003B49F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA436A831AB54C38009A654C /* AudioToolbox.framework in Frameworks */,
+				DA436A811AB54C2F009A654C /* AVFoundation.framework in Frameworks */,
+				DA229FD31AB481AC00316B47 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACF5A8E1AA38A89003B49F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA436A841AB54CD0009A654C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DA436A8F1AB557DC009A654C /* CleanShort.wav */,
+				DA436A8D1AB55794009A654C /* Cleaning.wav */,
+				DA436A8B1AB5560C009A654C /* Door.wav */,
+				DA436A891AB55181009A654C /* Failure.wav */,
+				DA436A871AB54FEB009A654C /* Magic.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		DA7FCE0A1AB3DCE200068A2A /* CarReviews */ = {
+			isa = PBXGroup;
+			children = (
+				DA7FCE0B1AB3DD0200068A2A /* ReviewViewController.h */,
+				DA7FCE0C1AB3DD0200068A2A /* ReviewViewController.m */,
+			);
+			name = CarReviews;
+			sourceTree = "<group>";
+		};
+		DACF5A6C1AA38A88003B49F3 = {
+			isa = PBXGroup;
+			children = (
+				DA436A821AB54C38009A654C /* AudioToolbox.framework */,
+				DA436A801AB54C2F009A654C /* AVFoundation.framework */,
+				DA229FD21AB481AC00316B47 /* Foundation.framework */,
+				DA8F22BB1AB08A380069A673 /* Settings.bundle */,
+				DACF5A771AA38A88003B49F3 /* CarCola */,
+				DACF5A941AA38A89003B49F3 /* CarColaTests */,
+				DACF5A761AA38A88003B49F3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DACF5A761AA38A88003B49F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DACF5A751AA38A88003B49F3 /* CarCola.app */,
+				DACF5A911AA38A89003B49F3 /* CarColaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DACF5A771AA38A88003B49F3 /* CarCola */ = {
+			isa = PBXGroup;
+			children = (
+				DA436A841AB54CD0009A654C /* Sounds */,
+				DA7FCE0A1AB3DCE200068A2A /* CarReviews */,
+				DACF5A7C1AA38A88003B49F3 /* AppDelegate.h */,
+				DACF5A7D1AA38A88003B49F3 /* AppDelegate.m */,
+				DA436A941AB60CB6009A654C /* InitialLaunch.h */,
+				DA436A951AB60CB6009A654C /* InitialLaunch.m */,
+				DACF5A7F1AA38A88003B49F3 /* FirstViewController.h */,
+				DACF5A801AA38A88003B49F3 /* FirstViewController.m */,
+				DACF5A821AA38A88003B49F3 /* SecondViewController.h */,
+				DACF5A831AA38A88003B49F3 /* SecondViewController.m */,
+				DACF5A851AA38A88003B49F3 /* Main.storyboard */,
+				DACF5A881AA38A88003B49F3 /* Images.xcassets */,
+				DACF5A8A1AA38A88003B49F3 /* LaunchScreen.xib */,
+				DACF5A781AA38A88003B49F3 /* Supporting Files */,
+				DAACD7421AA6BC450070AE78 /* ThirdViewController.h */,
+				DAACD7431AA6BC450070AE78 /* ThirdViewController.m */,
+				DAACD7451AA6CB990070AE78 /* ActivityIndicatorView.h */,
+				DAACD7461AA6CB990070AE78 /* ActivityIndicatorView.m */,
+				DA279BD31AA8D9E900810518 /* SaveNoteView.h */,
+				DA279BD41AA8D9E900810518 /* SaveNoteView.m */,
+				DAD264B41AA95F72005853B4 /* MyCar.h */,
+				DAD264B51AA95F72005853B4 /* MyCar.m */,
+				DAD264B71AA96FA4005853B4 /* MyCarTableViewController.h */,
+				DAD264B81AA96FA4005853B4 /* MyCarTableViewController.m */,
+				DAD264BA1AA97141005853B4 /* MyCarTableViewCell.h */,
+				DAD264BB1AA97141005853B4 /* MyCarTableViewCell.m */,
+				DAE5C4141AB35A6100D8665A /* CardView */,
+				DA8F22B81AAF810A0069A673 /* GalleryTableViewController.h */,
+				DA8F22B91AAF810A0069A673 /* GalleryTableViewController.m */,
+				DA8F22BD1AB08A7C0069A673 /* SharedNetworking.h */,
+				DA8F22BE1AB08A7C0069A673 /* SharedNetworking.m */,
+				DAF404451AB12B77001AD0AE /* InfoViewController.h */,
+				DAF404461AB12B77001AD0AE /* InfoViewController.m */,
+				DAF404481AB16F15001AD0AE /* RateViewController.h */,
+				DAF404491AB16F15001AD0AE /* RateViewController.m */,
+				DA6ADEC51AB28F72009AC013 /* UserRateMeViewController.h */,
+				DA6ADEC61AB28F72009AC013 /* UserRateMeViewController.m */,
+				DA436A911AB5E0DE009A654C /* RatingAppViewController.h */,
+				DA436A921AB5E0DE009A654C /* RatingAppViewController.m */,
+			);
+			path = CarCola;
+			sourceTree = "<group>";
+		};
+		DACF5A781AA38A88003B49F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DACF5A791AA38A88003B49F3 /* Info.plist */,
+				DACF5A7A1AA38A88003B49F3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DACF5A941AA38A89003B49F3 /* CarColaTests */ = {
+			isa = PBXGroup;
+			children = (
+				DACF5A971AA38A89003B49F3 /* CarColaTests.m */,
+				DACF5A951AA38A89003B49F3 /* Supporting Files */,
+			);
+			path = CarColaTests;
+			sourceTree = "<group>";
+		};
+		DACF5A951AA38A89003B49F3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DACF5A961AA38A89003B49F3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAE5C4141AB35A6100D8665A /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				DAE5C4111AB3593E00D8665A /* CarScrollViewController.h */,
+				DAE5C4121AB3593E00D8665A /* CarScrollViewController.m */,
+				DAE5C4151AB35A9400D8665A /* CardViewLayout.h */,
+				DAE5C4161AB35A9400D8665A /* CardViewLayout.m */,
+				DAE5C4181AB35AB600D8665A /* CardCollectionViewCell.h */,
+				DAE5C4191AB35AB600D8665A /* CardCollectionViewCell.m */,
+			);
+			name = CardView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DACF5A741AA38A88003B49F3 /* CarCola */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DACF5A9B1AA38A89003B49F3 /* Build configuration list for PBXNativeTarget "CarCola" */;
+			buildPhases = (
+				DACF5A711AA38A88003B49F3 /* Sources */,
+				DACF5A721AA38A88003B49F3 /* Frameworks */,
+				DACF5A731AA38A88003B49F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarCola;
+			productName = CarCola;
+			productReference = DACF5A751AA38A88003B49F3 /* CarCola.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DACF5A901AA38A89003B49F3 /* CarColaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DACF5A9E1AA38A89003B49F3 /* Build configuration list for PBXNativeTarget "CarColaTests" */;
+			buildPhases = (
+				DACF5A8D1AA38A89003B49F3 /* Sources */,
+				DACF5A8E1AA38A89003B49F3 /* Frameworks */,
+				DACF5A8F1AA38A89003B49F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DACF5A931AA38A89003B49F3 /* PBXTargetDependency */,
+			);
+			name = CarColaTests;
+			productName = CarColaTests;
+			productReference = DACF5A911AA38A89003B49F3 /* CarColaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DACF5A6D1AA38A88003B49F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Hao Zhou";
+				TargetAttributes = {
+					DACF5A741AA38A88003B49F3 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					DACF5A901AA38A89003B49F3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = DACF5A741AA38A88003B49F3;
+					};
+				};
+			};
+			buildConfigurationList = DACF5A701AA38A88003B49F3 /* Build configuration list for PBXProject "CarCola" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DACF5A6C1AA38A88003B49F3;
+			productRefGroup = DACF5A761AA38A88003B49F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DACF5A741AA38A88003B49F3 /* CarCola */,
+				DACF5A901AA38A89003B49F3 /* CarColaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DACF5A731AA38A88003B49F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8F22BC1AB08A380069A673 /* Settings.bundle in Resources */,
+				DA436A901AB557DC009A654C /* CleanShort.wav in Resources */,
+				DACF5A871AA38A88003B49F3 /* Main.storyboard in Resources */,
+				DACF5A8C1AA38A88003B49F3 /* LaunchScreen.xib in Resources */,
+				DA436A8E1AB55794009A654C /* Cleaning.wav in Resources */,
+				DA436A8A1AB55181009A654C /* Failure.wav in Resources */,
+				DA436A8C1AB5560C009A654C /* Door.wav in Resources */,
+				DACF5A891AA38A88003B49F3 /* Images.xcassets in Resources */,
+				DA436A881AB54FEB009A654C /* Magic.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACF5A8F1AA38A89003B49F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DACF5A711AA38A88003B49F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8F22BF1AB08A7C0069A673 /* SharedNetworking.m in Sources */,
+				DAD264B91AA96FA4005853B4 /* MyCarTableViewController.m in Sources */,
+				DACF5A841AA38A88003B49F3 /* SecondViewController.m in Sources */,
+				DAACD7471AA6CB990070AE78 /* ActivityIndicatorView.m in Sources */,
+				DA7FCE0D1AB3DD0200068A2A /* ReviewViewController.m in Sources */,
+				DAF4044A1AB16F15001AD0AE /* RateViewController.m in Sources */,
+				DAACD7441AA6BC450070AE78 /* ThirdViewController.m in Sources */,
+				DA8F22BA1AAF810A0069A673 /* GalleryTableViewController.m in Sources */,
+				DA279BD51AA8D9E900810518 /* SaveNoteView.m in Sources */,
+				DAE5C4171AB35A9400D8665A /* CardViewLayout.m in Sources */,
+				DAE5C4131AB3593E00D8665A /* CarScrollViewController.m in Sources */,
+				DAE5C41A1AB35AB600D8665A /* CardCollectionViewCell.m in Sources */,
+				DA6ADEC71AB28F72009AC013 /* UserRateMeViewController.m in Sources */,
+				DA436A931AB5E0DE009A654C /* RatingAppViewController.m in Sources */,
+				DAF404471AB12B77001AD0AE /* InfoViewController.m in Sources */,
+				DACF5A7E1AA38A88003B49F3 /* AppDelegate.m in Sources */,
+				DACF5A811AA38A88003B49F3 /* FirstViewController.m in Sources */,
+				DA436A961AB60CB6009A654C /* InitialLaunch.m in Sources */,
+				DAD264B61AA95F72005853B4 /* MyCar.m in Sources */,
+				DAD264BC1AA97141005853B4 /* MyCarTableViewCell.m in Sources */,
+				DACF5A7B1AA38A88003B49F3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DACF5A8D1AA38A89003B49F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACF5A981AA38A89003B49F3 /* CarColaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DACF5A931AA38A89003B49F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DACF5A741AA38A88003B49F3 /* CarCola */;
+			targetProxy = DACF5A921AA38A89003B49F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DACF5A851AA38A88003B49F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DACF5A861AA38A88003B49F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DACF5A8A1AA38A88003B49F3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DACF5A8B1AA38A88003B49F3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DACF5A991AA38A89003B49F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DACF5A9A1AA38A89003B49F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DACF5A9C1AA38A89003B49F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CarCola/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DACF5A9D1AA38A89003B49F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CarCola/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		DACF5A9F1AA38A89003B49F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CarColaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarCola.app/CarCola";
+			};
+			name = Debug;
+		};
+		DACF5AA01AA38A89003B49F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CarColaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarCola.app/CarCola";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DACF5A701AA38A88003B49F3 /* Build configuration list for PBXProject "CarCola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACF5A991AA38A89003B49F3 /* Debug */,
+				DACF5A9A1AA38A89003B49F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DACF5A9B1AA38A89003B49F3 /* Build configuration list for PBXNativeTarget "CarCola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACF5A9C1AA38A89003B49F3 /* Debug */,
+				DACF5A9D1AA38A89003B49F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DACF5A9E1AA38A89003B49F3 /* Build configuration list for PBXNativeTarget "CarColaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DACF5A9F1AA38A89003B49F3 /* Debug */,
+				DACF5AA01AA38A89003B49F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DACF5A6D1AA38A88003B49F3 /* Project object */;
+}
