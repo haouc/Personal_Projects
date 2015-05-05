@@ -44,11 +44,10 @@ public class Protein {
     };
 
     Protein(){
-        synchronized(this){};
     }
 
     //the method read, validates, translates, and stores data from inputed file to ArrayList. 
-    ArrayList<String> trans(String input) throws IOException {
+    synchronized ArrayList<String> trans(String input) throws IOException {
         ArrayList<String> strArr = new ArrayList<String>();
         FileReader reader = new FileReader(input);
         BufferedReader bufReader = new BufferedReader(reader);
