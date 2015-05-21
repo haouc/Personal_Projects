@@ -1,0 +1,78 @@
+<resources>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="appName">Classics Quiz</string>
+    <string name="app_name">Classics Quiz</string>
+    <string name="yourName">Your Name:\ </string>
+    <string name="enterName">enter your name....</string>
+    <string name="welcome">Welcome to Classics Quiz</string>
+    <string name="LatinQuiz">Latin Quiz</string>
+    <string name="GreekQuiz">Greek Quiz</string>
+    <string name="MixedQuiz">Mixed Quiz</string>
+    <string name="exit">Exit</string>
+    <string name="questionNumberText">Question %d:</string>
+    <string name="pleaseSelectAnswer">Please select an answer to proceed.</string>
+    <string name="submit">Submit</string>
+    <string name="quit">Quit</string>
+    <string name="reset">Reset</string>
+    <string name="anotherQuiz">Another Quiz</string>
+    <string name="correct">Correct: %d</string>
+    <string name="incorrect">Incorrect: %d</string>
+    <string name="score">Score: %d%%</string>
+    <string name="nameResultHeader">%s, your results are:</string>
+
+    <string-array
+        name="word_classics">
+
+        <item>aedificium|building|LAT</item>
+        <item>alacer|quick|LAT</item>
+        <item>dulcis|sweet|LAT</item>
+        <item>tardus|slow|LAT</item>
+        <item>pello|push|LAT</item>
+        <item>pendeo|hanging|LAT</item>
+        <item>sum|be|LAT</item>
+        <item>civis|citizen|LAT</item>
+        <item>dignus|worthy|LAT</item>
+        <item>equus|horse|LAT</item>
+        <item>vas|vessel|LAT</item>
+        <item>ānus|ring|LAT</item>
+        <item>ācer|sharp|LAT</item>
+        <item>acerbus|bitter|LAT</item>
+        <item>cinis|ashes|LAT</item>
+        <item>clemens|mild|LAT</item>
+        <item>collis|hill|LAT</item>
+        <item>collum|neck|LAT</item>
+        <item>cornū|horn|LAT</item>
+        <item>corvus|raven|LAT</item>
+        <item>creta|chalk|LAT</item>
+        <item>crīnis|hair|LAT</item>
+
+
+
+        <item>ankura|anchor|GRK</item>
+        <item>agora|marketplace|GRK</item>
+        <item>allotropos|strange|GRK</item>
+        <item>amblus|dim|GRK</item>
+        <item>bios|life|GRK</item>
+        <item>boreas|north|GRK</item>
+        <item>bradus|slow|GRK</item>
+        <item>thermos|hot|GRK</item>
+        <item>hippos|horse|GRK</item>
+        <item>angeion|vessel|GRK</item>
+        <item>kuklos|ring|GRK</item>
+        <item>oxus|sharp|GRK</item>
+        <item>acus|chaff|GRK</item>
+        <item>austēros|bitter|GRK</item>
+        <item>akakia|harmlessness|GRK</item>
+        <item>aktis|ray|GRK</item>
+        <item>hals|salt|GRK</item>
+        <item>alōpēx|fox|GRK</item>
+        <item>ambux|cup|GRK</item>
+        <item>amulon|starch|GRK</item>
+        <item>amphibolos|doubtful|GRK</item>
+
+    </string-array>
+
+
+</resources>

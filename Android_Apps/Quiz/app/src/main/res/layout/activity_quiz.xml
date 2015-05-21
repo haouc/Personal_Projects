@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="100"
+              android:background="#000"
+    >
+
+    <TextView
+        android:textColor="#FFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:id="@+id/textView"
+        android:paddingTop="15dp"
+        android:textSize="25sp"
+        android:layout_weight="10"
+        android:layout_marginRight="50dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yourName"
+            android:textSize="20sp"
+            />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:layout_marginRight="20dp"
+            android:background="#3c3c3c"
+            android:textColorHint="#AAA"
+            android:hint="@string/enterName"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/latinButton"
+            android:layout_height="150dp"
+            android:text="@string/LatinQuiz"
+            android:layout_weight="40"
+            style="@style/button_style"/>
+
+        <Button
+            android:id="@+id/greekButton"
+            android:layout_height="150dp"
+            android:text="@string/GreekQuiz"
+            android:layout_weight="40"
+            style="@style/button_style"/>
+
+        <Button
+            android:id="@+id/mixedButton"
+            android:layout_height="150dp"
+            android:text="@string/MixedQuiz"
+            android:layout_weight="40"
+            style="@style/button_style"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/exitButton"
+        android:text="@string/exit"
+        android:layout_weight="20"
+        style="@style/button_style"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent" />
+</LinearLayout>
