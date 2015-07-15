@@ -1,0 +1,11 @@
+<div class="jumbotron">
+	
+<h3>Portrait: <%= image_tag @user.image, class: "protrait"%></h3>
+
+<h3>Username: <%= @user.username %></h3>
+
+<h3>Email: <%= @user.email %></h3>
+
+<h3><%= link_to "edit", edit_user_path(@user.id), class: "btn btn-info"%></h3>
+
+</div>

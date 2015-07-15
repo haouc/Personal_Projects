@@ -1,0 +1,63 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .protrait{
+ 	width:40px;
+ 	height:40px;
+ 	border-radius: 25px;
+ }
+
+ .post-tweet{
+ 	width: 100%;
+ 	border: 2px solid;
+ 	border-radius: 10px;
+ 	resize: none;
+ }
+
+ .tweet-image{
+ 	width:30%;
+ 	margin-top: 20px
+ }
+
+ .dividing_line{ 
+ 	display: block; 
+ 	height: 1px;
+ 	border: 0; 
+ 	border-top: 1px solid #ccc;
+ 	margin: 1em 0; 
+ 	padding: 0; 
+ }
+
+ .week{
+ 	color: white;
+ 	background: red;
+ 	border-radius: 3px;
+ 	padding: 3px 10px;
+ }
+
+ .medium{
+ 	color: white;
+ 	background: orange;
+ 	border-radius: 3px;
+ 	padding: 0px 10px;
+ }
+
+.strong{
+	color: white;
+ 	background: green;
+ 	border-radius: 3px;
+ 	padding: 0px 10px;
+}

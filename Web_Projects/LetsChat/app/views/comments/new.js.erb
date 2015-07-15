@@ -1,0 +1,2 @@
+$(".comment-list-<%= j @tweet_id %>").toggle();
+$('#comment_of_<%= j @tweet_id %>').html('<%= j render("form") %>');

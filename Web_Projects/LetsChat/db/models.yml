@@ -1,0 +1,35 @@
+User
+  username: string
+  password_digest: string
+  email: string
+  image: string
+  message_number: integer
+
+Tweet
+  content: string
+  image: string
+  date: integer
+  user_id: integer
+
+Message
+  content: string
+  date: integer
+  sender_id: integer
+  receiver_id: integer
+  is_read: boolean
+
+Follow
+  fan_id: integer
+  star_id: integer
+
+Comment
+  content: string
+  date: integer
+  tweet_id: integer
+  user_id: integer
+
+Like
+  tweet_id: integer
+  user_id: integer
+
+

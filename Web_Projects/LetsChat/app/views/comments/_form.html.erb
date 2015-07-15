@@ -1,0 +1,9 @@
+<%= form_tag tweet_comments_path(params["tweet_id"]), method: "post", remote: true do %>
+<label for="comment">
+  <%= image_tag(session["user_image"], class: "protrait")%>
+  <%= session["username"] %>
+</label>
+<br><br>
+<input name="comment" id="comment-input-<%= params["tweet_id"] %>" style="width:80%">
+<button class="btn btn-success">Comment</button>
+<% end %>

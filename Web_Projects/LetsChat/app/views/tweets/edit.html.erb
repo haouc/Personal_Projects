@@ -1,0 +1,16 @@
+<div class="col-xs-9">
+	<%= form_tag tweet_path(@tweet.id), method:"patch" do %>
+	<label for="update_tweet">Update the tweet</label>
+	<br>
+	<textarea name="update_tweet" class="post-tweet" rows="5">
+		<%= @tweet.content%>
+	</textarea>
+	<label for="image">Image</label>
+	<br>
+	<input name="image" size="80" value="<%= @tweet.image%>">
+	<p>
+		<br>
+		<button class="btn btn-success">UPDATE</button>
+	</p>
+	<% end %>
+</div>

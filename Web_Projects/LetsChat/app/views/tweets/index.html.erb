@@ -1,0 +1,148 @@
+<div class="row">
+  <div class="col-xs-1" id="new_link">
+
+  </div>
+
+  <!-- middle part -->
+  <div class="col-xs-8">
+    <div class="jumbotron">
+      <%= form_tag tweets_path, method:"post" do %>
+      <label for="post_tweet">What news do you want to share with others?</label>
+      <br>
+      <textarea name="post_tweet" class="post-tweet" rows="5"></textarea>
+      <button class="btn btn-success">POST</button>
+      <% end %>
+    </div>
+    <!---list tweets -->
+    <% @tweets.each do |tweet| %>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-xs-2">
+          <%= image_tag(User.find_by(id: tweet.user_id).image, class: "protrait")%>
+        </div>
+        <div class="col-xs-8">
+          <h4>          
+            <%= link_to User.find_by(id: tweet.user_id).username, tweets_path(:user_id => tweet.user_id) %>
+            <br>
+            <small ><%= link_to "follow", user_follows_path(:user_id => session["user_id"], :fan => session["user_id"], :star => tweet.user_id), method: "post" %>
+
+              <% if Follow.find_by(fan_id: session["user_id"], star_id: tweet.user_id).present? %>
+              <%= link_to "/ unfollow", user_follow_path(:user_id => session["user_id"], :id => Follow.find_by(fan_id: session["user_id"], star_id: tweet.user_id).id), method: "delete"%>
+              <% end %>
+
+            </small>
+          </h4>
+          <br>
+          <%= tweet.content %>
+          <br>
+          <% if tweet.image.present? %>
+          <%= image_tag tweet.image, class: "tweet-image" %>
+          <% end %>
+          <br><br>
+          <small><%= Time.at(tweet.date) %></small>
+        </div>
+        <% if tweet.user_id == session["user_id"].to_i %>
+        <div class="col-xs-1">
+          <%= link_to 'Edit', edit_tweet_path(tweet.id) %>
+        </div>
+        <div class="col-xs-1">
+          <%= link_to 'Delete', tweet_path(tweet.id), method: :delete %>
+        </div>
+        <% end %>
+      </div>
+      <hr>
+      <div class="col-xs-3">
+        <a href="#" >Like</a>
+      </div>
+      <div class="col-xs-3">
+        <%= link_to 'Comment', new_tweet_comment_path(tweet.id), remote: true%>
+      </div>
+      <div class="col-xs-3">
+        <%= link_to 'View it', tweet_path(tweet.id)%>
+      </div>
+      <div class="col-xs-3">
+        Share
+      </div>
+      <br>
+
+      <!-- hidden part for comments -->
+      <div class="comment-list-<%= tweet.id %>" style="display:none;margin-top:20px">
+        <div id="comment_of_<%= tweet.id %>"></div>
+        <% comments = Comment.where(tweet_id: tweet.id).order('date desc') %>
+        <% comments.each do |comment| %>
+        <div class="row" id="comment-<%=comment.id%>">
+          <hr class="dividing_line">
+          <div class="col-xs-1">
+            <%= image_tag(User.find_by(id: comment.user_id).image, class: "protrait")%>
+          </div>
+          <div class="col-xs-10">
+            <h4>
+              <%= User.find_by(id: comment.user_id).username %>
+              <div class="pull-right">
+                <small><%= Time.at(comment.date) %></small>
+              </div>
+            </h4>
+            <br>
+            <%= comment.content %>
+            <br>
+          </div>
+          <% if comment.user_id == session["user_id"].to_i %>
+          <div class="col-xs-1">
+            <%= link_to 'Delete', tweet_comment_path(tweet.id ,comment.id), 
+            method: :delete, 
+            remote: true, 
+            data: { confirm: "Are you sure to delete it?" } 
+            %>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+
+
+    </div>
+    <% end %>
+  </div>
+
+  <!-- right nav bar -->
+  <div class="col-xs-3">
+    <div class="jumbotron">
+      <%= image_tag(session["user_image"], class: "protrait")%>
+      <br>
+      <%= session["username"]%>
+      <hr>
+      <div class="row">
+        <div class="col-xs-6">
+          <%= link_to "following", user_follows_path(session["user_id"]) %>
+          <%= link_to "follower", user_follows_path(session["user_id"]) %>
+          <%= link_to "tweets", tweets_path(:user_id => session["user_id"]) %>
+        </div>
+        <div class="col-xs-2">
+          <%= Follow.where(fan_id: session["user_id"]).count%><br>
+          <%= Follow.where(star_id: session["user_id"]).count%><br>
+          <%= Tweet.where(user_id: session["user_id"]).count%><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <%= will_paginate @tweets, :renderer => BootstrapPagination::Rails %>
+</div>
+
+<script>
+  $(function(){
+
+    $('.tweet-image').click(function () {
+      if($(this).outerWidth() < $(this).parent().outerWidth()){
+        $(this).css("width", $(this).parent().outerWidth());
+      }
+      else {
+        $(this).css("width", $(this).parent().outerWidth()*0.3);
+      }
+    });
+
+  });
+</script>
+

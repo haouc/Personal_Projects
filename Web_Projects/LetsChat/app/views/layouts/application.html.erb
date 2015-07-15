@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final</title>
+  <%= favicon_link_tag 'chat_icon',type: 'image/png'%>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            <big style="color:orange;margin-left:0px;">LETsCHAT</big>
+            <sub><small>-- Hao Zhou</small></sub>
+          </a>
+        </div>
+        <ul class="nav navbar-nav" style="margin-left:25px">
+          <li><a href="/">Home</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Settings
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <% if !session["user_id"].present? %>
+              <li><a href="">Account Settings</a></li>
+              <% else %>
+              <li><%= link_to "Account Settings", user_path(session["user_id"]) %></li>
+              <% end %>
+              <% if !session["user_id"].present? %>
+              <li><a href="">Account Safety</li>
+              <% else %>
+              <li><%= link_to "Account Safety", edit_user_path(session["user_id"])  %></li>
+              <% end %>
+              <% if !session["user_id"].present? %>
+              <li><a href="">Message Center</a></li>
+              <% else %>
+              <li><%= link_to "Message Center", user_messages_path(session["user_id"]) %></li>
+              <% end %>
+            </ul>
+          </li>
+          <% if session["user_id"] == nil %>
+          <li><a href="">Messages</a></li>
+          <% else %>
+          <li><%= link_to "Messages", user_messages_path(session["user_id"]) %></li>
+          <% end %>
+          <li class="navbar-form">
+            <%= form_tag tweets_url, :method => "get" do %>
+            <%= text_field_tag :keyword %>
+            <%= submit_tag "Search" %>
+            <% end %>
+          </li>
+          
+<!--           <li><a href="">About</a></li>
+  <li><a href="">Contact us</a></li> -->
+</ul>
+
+<ul class="nav navbar-nav pull-right">
+  <% if session["user_id"].present? && User.find_by(id: session["user_id"]).present? %>
+  <li><%= link_to User.find_by(id: session["user_id"]).username, user_path(session["user_id"]) %></li>
+  <li><%= link_to "Sign Out", logout_path %></li>
+  <% else %>
+  <li><%= link_to "Sign Up", '/signup' %></li>
+  <li><%= link_to "Sign In", '/login' %></li>
+  <% end %>
+</ul>
+
+</div>
+</nav>
+</div>
+
+<div class="container" style="padding-top:60px">
+  <% if notice.present? %>
+  <div class="alert alert-info" style="text-align: center; width: 70%; margin-left: 10%">
+    <%= notice %>
+  </div>
+  <% end %>
+
+  <%= yield %>
+
+</div>
+
+</body>
+</html>
+

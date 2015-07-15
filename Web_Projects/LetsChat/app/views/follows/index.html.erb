@@ -1,0 +1,30 @@
+
+<div class="row">
+	<div class="col-sm-4">
+		<big style="color: green">I Follow</big><br>
+		<% if @user.followees.present? %>
+		<% @user.followees.each do |followee| %>
+		<ul>
+			<li>
+				<%= link_to followee.username, tweets_path(:user_id => User.find_by(username: followee.username)) %>
+				<br>
+			</li>
+		</ul>
+		<% end %>
+		<% end %>
+	</div>
+
+	<div class="col-sm-4">
+		<big style="color:red">Follow Me</big><br>
+		<% if @user.followers.present? %>
+		<% @user.followers.each do |follower| %>
+		<ul>
+			<li>
+				<%= link_to follower.username, tweets_path(:user_id => User.find_by(username: follower.username)) %>
+				<br>
+			</li>
+		</ul>
+		<% end %>
+		<% end %> 
+	</div>
+</div>

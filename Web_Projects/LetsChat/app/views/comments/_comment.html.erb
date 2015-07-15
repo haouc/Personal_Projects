@@ -1,0 +1,27 @@
+
+<div class="row" id="comment-<%=@comment.id%>">
+	<hr class="dividing_line">
+	<div class="col-xs-1">
+		<%= image_tag(User.find_by(id: @comment.user_id).image, class: "protrait")%>
+	</div>
+	<div class="col-xs-10">
+		<h4>
+			<%= User.find_by(id: @comment.user_id).username %>
+			<div class="pull-right">
+				<small><%= Time.at(@comment.date) %></small>
+			</div>
+		</h4>
+		<br>
+		<%= @comment.content %>
+		<br>
+	</div>
+	<% if @comment.user_id == session["user_id"].to_i %>
+	<div class="col-xs-1">
+		<%= link_to 'Delete', tweet_comment_path(@comment.tweet_id ,@comment.id), 
+		method: :delete, 
+		remote: true, 
+		data: { confirm: "Are you sure to delete it?" } 
+		%>
+	</div>
+	<% end %>
+</div>

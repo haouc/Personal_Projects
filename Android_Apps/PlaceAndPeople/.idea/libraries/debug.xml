@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/library-1.0.16-b4fcb6f89e1e5c693df9fbbad7e10447306dcf51.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/commons-codec-1.4-6dc53142113be530f9f238772b6bf633db2454f0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-fca54a68eae0f76b9280379a9eecde2da661e759.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-ce15c80f7558de76f87d5cbd6358ecd3d16602e3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/classes-164b277b4179d2d20b1813b2f7008b9b17c66bd3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/scribe-1.1.0-05e8e2b53b95c63b782c41851838f3bded283a90.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-27376702f8c81bcb83b2773098129c27e99ecf1e.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/gson-2.2.4-6fe18883c916d8c89a78b8b6000eda0105ea2cf5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/systembartint-1.0.3-f2ddc3ec3adfea705caced0a4b603384332d43f0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

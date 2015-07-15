@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col-xs-1" id="new_link">
+
+  </div>
+  <div class="col-xs-8">
+    <div class="jumbotron">
+      <%= form_tag user_messages_path, method:"post" do %>
+      <label for="sending message">Compose message?</label>
+      <br>
+      <textarea name="receiver" rows="1" cols="25" placeholder="Receiver Name"></textarea>
+      <br>
+      <!-- <textarea name="title" rows="1" cols="50" placeholder="Message Title"></textarea> -->
+      <br>
+      <textarea name="message" class="create message" rows="5" cols="90" placeholder="Message Body"></textarea>
+      <br>
+      <button class="btn btn-success">Send</button>
+      <% end %>
+    </div>
+
+    Messages Sent From <%= @user.username %><br>
+    <% if !@messages.present? %>
+    <big>YOU HAVE NOT SENT ANY MESSAGES!</big>
+    <% end %>
+    
+    <br><big>YOU HAVE SENT <%= @messages.count %> MESSAGES:</big>
+
+    <!---list messages for sent messages-->
+    <% @messages.each do |msg| %>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-xs-2">
+
+          <big>To: &nbsp</big>
+          <% if User.find_by_id(msg.receiver_id).image.present? %>
+          <%= image_tag(User.find_by_id(msg.receiver_id).image, class: "protrait")%>
+          <% end %>
+        </div>
+        <div class="col-xs-8">
+          <h4>           
+            <%= link_to User.find_by_id(msg.receiver_id).username, tweets_path(user_id: msg.receiver_id) %>
+          </h4>
+          <% if msg.is_read == false %>
+          <small style="color:red">(<%= User.find_by_id(msg.receiver_id).username %> hasn't read this message.)</small>
+          <% else %>
+          <small style="color:red">(<%= User.find_by_id(msg.receiver_id).username %> has already read this message.)</small>
+          <% end %>
+          <br>
+          <%= msg.content %>
+          <br>
+          <small><%= Time.at(msg.date) %></small>
+        </div>
+        <div class="col-xs-1">
+          <%= link_to 'Delete', user_message_path(session["user_id"], msg.id), method: :delete %>
+          <!-- <#%= link_to 'Read', user_message_path(session["user_id"], msg.id), method: :patch %> -->
+        </div>
+        
+      </div>
+    </div>
+    <% end %>
+
+    <!---list messages for incoming messages-->
+    <div>
+      Message Received By <%= @user.username %><br>
+      <% if !@messages_in.present? %>
+      <big> YOU HAVE NO MESSAGES AVAILABLE! </big>
+      <% end %>
+      <br><big>YOU HAVE RECEIVED <%= @messages_in.count %> MESSAGES:</big>
+      <% @messages_in.each do |msg| %>
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-xs-2">
+            <big>From: &nbsp</big>
+            <% if User.find_by_id(msg.sender_id).image.present? %>
+            <%= image_tag(User.find_by_id(msg.sender_id).image, class: "protrait")%>
+            <% end %>
+          </div>
+          <div class="col-xs-8">
+            <h4>          
+              <%= link_to User.find_by_id(msg.sender_id).username, tweets_path(user_id: msg.receiver_id) %>
+            </h4>
+            <% if msg.is_read == false %>
+            <small style="color:red">(This is an un-read message.)</small>
+            <% else %>
+            <small style="color:red">(You have already read this message.)</small>
+            <% end %>
+            <br>
+            <%= msg.content %>
+            <br>
+            <small><%= Time.at(msg.date) %></small>
+          </div>
+          <div class="col-xs-1">
+            <%= link_to 'Delete', user_message_path(session["user_id"], msg.id), method: :delete %>
+            <%= link_to 'Read', user_message_path(session["user_id"], msg.id), method: :patch %>
+          </div>
+          
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

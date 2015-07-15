@@ -1,0 +1,5 @@
+$("#comment_of_<%= @comment.tweet_id %>").after(
+	'<%= j render "comment" %>'
+	);
+
+$("#comment-input-<%= @comment.tweet_id %>").val("")
