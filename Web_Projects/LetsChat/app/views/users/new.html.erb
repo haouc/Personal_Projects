@@ -26,10 +26,21 @@
 	<p>
 		<%= label_tag :password %><small style="color:red"> * </small>
 		<br>
-		<%= password_field_tag :password %> <span id="strength" ></span>
+		<%= password_field_tag :password %> 
 	</p>
-
-
+		<!--<span id="strength" ></span> -->
+	<span>
+		<div id="pswd_info">
+			<h4>Password must meet the following requirements:</h4>
+			<ul>
+				<li id="letter" class="invalid">At least <strong>one letter</strong></li>
+				<li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
+				<li id="number" class="invalid">At least <strong>one number</strong></li>
+				<li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
+			</ul>
+		</div>
+	</span>
+	
 	<p>
 		<%= label_tag :image %> <small style="color:green"> (optional)</small>
 		<br>
@@ -44,18 +55,58 @@
 
 <script>
 	$('#password').keyup(function () {
-		var len = $('#password').val().length;
-		if(len < 4){
-			$('#strength').text("week");
-			$('#strength').attr("class","week");
+		var pswd = $(this).val();
+		//validate the length
+		if(pswd.length < 8) {
+			$('#length').removeClass('valid').addClass('invalid');
+		}else{
+			$('#length').removeClass('invalid').addClass('valid');
 		}
-		else if(len < 8){
-			$('#strength').text("medium");
-			$('#strength').attr("class","medium");
+
+		//Then validate the letter
+		if(pswd.match(/[A-z]/)){
+			$('#letter').removeClass('invalid').addClass('valid');
+		}else{
+			$('#letter').removeClass('valid').addClass('invalid');
 		}
-		else {
-			$('#strength').text("strong");
-			$('#strength').attr("class","strong");
+
+		//Now validate capital letters
+		if(pswd.match(/[A-Z]/)){
+			$('#capital').removeClass('invalid').addClass('valid');
+		}else{
+			$('#capital').removeClass('valid').addClass('invalid');
 		}
+
+		//last step, validate numbers
+		if(pswd.match(/[0-9]/)){
+			$('#number').removeClass('invalid').addClass('valid');
+		}else{
+			$('#number').removeClass('valid').addClass('invalid');
+		}
+	}).focus(function(){
+		$('#pswd_info').show();
+	}).blur(function(){
+		$('#pswd_info').hide();
 	});
+
 </script>
+
+<!--JQuery code triger the event of password check up 
+
+//<script>
+// 	$('#password').keyup(function () {
+// 		var len = $('#password').val().length;
+// 		if(len < 4){
+// 			$('#strength').text("week");
+// 			$('#strength').attr("class","week");
+// 		}
+// 		else if(len < 8){
+// 			$('#strength').text("medium");
+// 			$('#strength').attr("class","medium");
+// 		}
+// 		else {
+// 			$('#strength').text("strong");
+// 			$('#strength').attr("class","strong");
+// 		}
+// 	});
+// </script> -->

@@ -14,11 +14,11 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		# if user does not assign a url of image for themself, app assign a question icon to them.
+		# if user does not assign a url of image for themself, app assign a question maker icon to them.
 		if !params[:image].present?
 			params[:image] = "icon_question.png"
 		end
-		@user = User.new(username: params[:username], email: params[:email], password: params[:password], image: params[:image])
+		@user = User.new(username: params[:username].downcase, email: params[:email].downcase, password: params[:password], image: params[:image])
 		if @user.save
 			redirect_to root_url, notice: "Thanks for signing up. Welcome to our site, Please sign in here!"
 		else

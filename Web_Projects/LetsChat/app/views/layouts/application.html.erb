@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Final</title>
+  <title>Social Networking App</title>
   <%= favicon_link_tag 'chat_icon',type: 'image/png'%>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -50,7 +50,7 @@
           <% end %>
           <li class="navbar-form">
             <%= form_tag tweets_url, :method => "get" do %>
-            <%= text_field_tag :keyword %>
+            <%= text_field_tag :keyword.downcase %>
             <%= submit_tag "Search" %>
             <% end %>
           </li>

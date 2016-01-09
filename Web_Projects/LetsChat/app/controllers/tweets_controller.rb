@@ -20,8 +20,9 @@ class TweetsController < ApplicationController
 		if params[:keyword].present?
 			
 			if User.where("username LIKE ?", "%#{params[:keyword]}").present?
-				userid = User.find_by(username: params[:keyword]).id
+				userid = User.find_by(username: params[:keyword].downcase).id
 				@tweets = Tweet.where("user_id LIKE ?", "%#{userid}")
+
 			else
 				redirect_to root_url, notice: "Search ID doesn't exist!"
 				return

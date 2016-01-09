@@ -13,7 +13,7 @@
   				<%= image_tag @tweet.image, class: "tweet-image" %>
   				<% end %>
   				<br><br>
-  				<small><%= Time.at(@tweet.date) %></small>
+  				<small><%= Time.at(@tweet.date).strftime("Posted on %m/%d/%y at %I:%M%p") %></small>
   			</div>
   			<% if @tweet.user_id == session["user_id"].to_i %>
   			<div class="col-xs-1">
@@ -56,7 +56,8 @@
   					<h4>
   						<%= User.find_by(id: comment.user_id).username %>
   						<div class="pull-right">
-  							<small><%= Time.at(comment.date) %></small>
+              <br><br>
+  							<small><%= Time.at(comment.date).strftime("Commented on %m/%d/%y at %I:%M%p") %></small>
   						</div>
   					</h4>
   					<br>
