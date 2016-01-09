@@ -63,12 +63,12 @@
 }
 
 #pswd_info {
-	position:absolute;
+	position:static;
   bottom:-75px;
   bottom: -115px\9;
   right:55px;
   width:250px;
-  padding:15px;
+  padding:10px;
   background:#fefefe;
   font-size:.875em;
   border-radius:5px;
@@ -77,12 +77,12 @@
 }
 
 #pswd_info h4 {
-  margin:0 0 10px 0;
+  margin:0 0 15px 0;
   padding:0;
   font-weight:normal;
 }
 
-#pswd_info::before {
+/*#pswd_info::before {
   content: "\25B2";
   position:absolute;
   top:-12px;
@@ -92,10 +92,14 @@
   color:#ddd;
   text-shadow:none;
   display:block;
-}
+}*/
 
 #pswd_info {
 	display: none;
+}
+
+#email_info {
+  display: none;
 }
 
 .invalid {

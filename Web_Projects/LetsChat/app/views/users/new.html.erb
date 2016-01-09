@@ -20,7 +20,7 @@
 	<p>
 		<%= label_tag :email %><small style="color:red"> * </small>
 		<br>
-		<%= text_field_tag :email %>
+		<%= text_field_tag :email %> <span id="email_info" class="invalid"><strong>Please make sure entering right email</strong></span>
 	</p>
 
 	<p>
@@ -33,28 +33,41 @@
 		<div id="pswd_info">
 			<h4>Password must meet the following requirements:</h4>
 			<ul>
-				<li id="letter" class="invalid">At least <strong>one letter</strong></li>
+				<li id="letter" class="invalid">At least <strong>one lowercase letter</strong></li>
 				<li id="capital" class="invalid">At least <strong>one capital letter</strong></li>
 				<li id="number" class="invalid">At least <strong>one number</strong></li>
 				<li id="length" class="invalid">Be at least <strong>8 characters</strong></li>
 			</ul>
 		</div>
 	</span>
-	
 	<p>
 		<%= label_tag :image %> <small style="color:green"> (optional)</small>
 		<br>
 		<!-- <#%= text_field_tag :image, 'Enter image url here', :onclick => 'if($(this).val()=="Enter search term..."){$(this).val("");};' %> -->
 		<%= text_field_tag :image, nil, :placeholder=>'enter image url here' %>
 	</p>
-
-	<%= button_tag "Sign Me Up!", class: "btn btn-success" %>
-
+	 <%= button_tag "Sign Me Up!", class: "btn btn-success" %>
 	<% end %>
 </div>
 
 <script>
-	$('#password').keyup(function () {
+	$('#email').keyup(function() {
+		var em = $('#email').val();
+    var emailRegex = '^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$';
+		if(em.match(emailRegex)){
+			$('#email_info').removeClass('invalid').addClass('valid');
+		}else{
+			$('#email_info').removeClass('valid').addClass('invalid');
+		}
+	}).focus(function(){
+		$('#email_info').show();
+	}).blur(function(){
+		$('#email_info').hide();
+	});
+</script>
+
+<script>
+	$('#password').keyup(function() {
 		var pswd = $(this).val();
 		//validate the length
 		if(pswd.length < 8) {
@@ -64,13 +77,13 @@
 		}
 
 		//Then validate the letter
-		if(pswd.match(/[A-z]/)){
+		if(pswd.match(/[a-z]/)){
 			$('#letter').removeClass('invalid').addClass('valid');
 		}else{
 			$('#letter').removeClass('valid').addClass('invalid');
 		}
 
-		//Now validate capital letters
+		//Now validate capital Capitals
 		if(pswd.match(/[A-Z]/)){
 			$('#capital').removeClass('invalid').addClass('valid');
 		}else{
@@ -88,7 +101,6 @@
 	}).blur(function(){
 		$('#pswd_info').hide();
 	});
-
 </script>
 
 <!--JQuery code triger the event of password check up 

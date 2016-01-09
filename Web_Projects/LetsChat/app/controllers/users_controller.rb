@@ -13,16 +13,23 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
+
 	def create
 		# if user does not assign a url of image for themself, app assign a question maker icon to them.
 		if !params[:image].present?
 			params[:image] = "icon_question.png"
 		end
 		@user = User.new(username: params[:username].downcase, email: params[:email].downcase, password: params[:password], image: params[:image])
-		if @user.save
+		if @user.password =~ /[a-z]/ && @user.password =~ /[A-Z]/ && @user.password =~ /[0-9]/ && @user.password.length > 8
+			validation = true
+		else
+			validation = false
+		end
+
+		if validation && @user.save
 			redirect_to root_url, notice: "Thanks for signing up. Welcome to our site, Please sign in here!"
 		else
-			render "new"
+			redirect_to signup_path, notice: "Sign up failed! Please try again with strong password or unused username."
 		end
 	end
 
@@ -58,7 +65,7 @@ class UsersController < ApplicationController
 				render "edit"
 			end
 		else
-			redirect_to edit_user_path(params[:id]), notice: "Password doesn't match the repassword"
+			redirect_to edit_user_path(params[:id]), notice: "Password doesn't match the existing password"
 		end
 	end
 end
