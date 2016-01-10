@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style tyep="text/css">
+
+.transbox {
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
   <title>Social Networking App</title>
   <%= favicon_link_tag 'chat_icon',type: 'image/png'%>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,7 +17,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
   <div class="container">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -32,7 +40,7 @@
               <li><%= link_to "Account Settings", user_path(session["user_id"]) %></li>
               <% end %>
               <% if !session["user_id"].present? %>
-              <li><a href="">Account Safety</li>
+              <li><a href="">Account Safety</a></li>
               <% else %>
               <li><%= link_to "Account Safety", edit_user_path(session["user_id"])  %></li>
               <% end %>
@@ -72,8 +80,12 @@
 </div>
 </nav>
 </div>
+</nav>
+</body>
+
 
 <div class="container" style="padding-top:60px">
+  <div class="transbox">
   <% if notice.present? %>
   <div class="alert alert-info" style="text-align: center; width: 70%; margin-left: 10%">
     <%= notice %>
@@ -81,9 +93,18 @@
   <% end %>
 
   <%= yield %>
-
+</div>
 </div>
 
 </body>
 </html>
+<script>
+   $.backstretch(["https://raw.githubusercontent.com/haouc/Personal_Projects/master/assets/images/Background-1.jpg"
+    , "https://github.com/haouc/Personal_Projects/blob/master/assets/images/Background-2.jpeg?raw=true"
+    , "https://github.com/haouc/Personal_Projects/blob/master/assets/images/Background-3.jpg?raw=true"
+    , "https://github.com/haouc/Personal_Projects/blob/master/assets/images/background-4.jpg?raw=true"
+    , "https://github.com/haouc/Personal_Projects/blob/master/assets/images/Background-5.jpeg?raw=true"
+    , "https://github.com/haouc/Personal_Projects/blob/master/assets/images/Background-6.jpg?raw=true"
+    , "https://github.com/haouc/Personal_Projects/blob/master/assets/images/Background-7.jpg?raw=true"], {duration: 9000, fade: 750});
+</script>
 

@@ -22,7 +22,8 @@
     <big>YOU HAVE NOT SENT ANY MESSAGES!</big>
     <% end %>
     
-    <br><big>YOU HAVE SENT <%= @messages.count %> MESSAGES:</big>
+    <br>
+    <big>YOU HAVE SENT <%= @messages.count %> MESSAGES:</big>
 
     <!---list messages for sent messages-->
     <% @messages.each do |msg| %>
@@ -59,12 +60,13 @@
     <% end %>
 
     <!---list messages for incoming messages-->
-    <div>
+    <div><br><br>
       Message Received By <%= @user.username %><br>
       <% if !@messages_in.present? %>
       <big> YOU HAVE NO MESSAGES AVAILABLE! </big>
       <% end %>
-      <br><big>YOU HAVE RECEIVED <%= @messages_in.count %> MESSAGES:</big>
+      <br>
+      <big>YOU HAVE RECEIVED <%= @messages_in.count %> MESSAGES:</big>
       <% @messages_in.each do |msg| %>
       <div class="jumbotron">
         <div class="row">

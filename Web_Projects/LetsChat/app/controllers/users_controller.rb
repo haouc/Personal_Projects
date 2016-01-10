@@ -65,7 +65,7 @@ class UsersController < ApplicationController
 				render "edit"
 			end
 		else
-			redirect_to edit_user_path(params[:id]), notice: "Password doesn't match the existing password"
+			redirect_to edit_user_path(params[:id]), notice: "Password doesn't match!"
 		end
 	end
 end

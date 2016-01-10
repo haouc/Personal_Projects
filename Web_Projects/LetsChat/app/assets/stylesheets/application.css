@@ -13,47 +13,46 @@
  *= require_tree .
  *= require_self
  */
-
- .protrait{
+.protrait{
  	width:40px;
  	height:40px;
  	border-radius: 25px;
- }
+}
 
- .post-tweet{
+.post-tweet{
  	width: 100%;
  	border: 2px solid;
  	border-radius: 10px;
  	resize: none;
- }
+}
 
- .tweet-image{
- 	width:30%;
- 	margin-top: 20px
- }
+.tweet-image{
+	width:30%;
+	margin-top: 20px
+}
 
- .dividing_line{ 
- 	display: block; 
- 	height: 1px;
- 	border: 0; 
- 	border-top: 1px solid #ccc;
- 	margin: 1em 0; 
- 	padding: 0; 
- }
+.dividing_line{ 
+	display: block; 
+	height: 1px;
+	border: 0; 
+	border-top: 1px solid #ccc;
+	margin: 1em 0; 
+	padding: 0; 
+}
 
- .week{
- 	color: white;
- 	background: red;
- 	border-radius: 3px;
- 	padding: 3px 10px;
- }
+.week{
+	color: white;
+	background: red;
+	border-radius: 3px;
+	padding: 3px 10px;
+}
 
- .medium{
- 	color: white;
- 	background: orange;
- 	border-radius: 3px;
- 	padding: 0px 10px;
- }
+.medium{
+	color: white;
+	background: orange;
+	border-radius: 3px;
+	padding: 0px 10px;
+}
 
 .strong{
 	color: white;
