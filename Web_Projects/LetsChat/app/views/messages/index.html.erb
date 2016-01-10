@@ -11,7 +11,7 @@
       <br>
       <!-- <textarea name="title" rows="1" cols="50" placeholder="Message Title"></textarea> -->
       <br>
-      <textarea name="message" class="create message" rows="5" cols="90" placeholder="Message Body"></textarea>
+      <textarea name="message" class="create message" rows="5" cols="60" placeholder="Message Body"></textarea>
       <br>
       <button class="btn btn-success">Send</button>
       <% end %>
@@ -63,7 +63,7 @@
     <div><br><br>
       Message Received By <%= @user.username %><br>
       <% if !@messages_in.present? %>
-      <big> YOU HAVE NO MESSAGES AVAILABLE! </big>
+      <big> YOU HAVE NO MESSAGES AVAILABLE TO VIEW! </big>
       <% end %>
       <br>
       <big>YOU HAVE RECEIVED <%= @messages_in.count %> MESSAGES:</big>
